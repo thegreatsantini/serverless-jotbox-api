@@ -1,0 +1,8 @@
+{
+    "body": "{\"draft\":\"second draft\",\"title\":\"second draft\", \"notes\":\"Draft Notes\"}",
+    "requestContext": {
+        "identity": {
+            "cognitoIdentityId": "USER-SUB-1234"
+        }
+    }
+}
