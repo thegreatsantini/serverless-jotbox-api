@@ -65,7 +65,7 @@ functions:
       handler: list.main
       events:
       - http:
-          path: notes
+          path: drafts
           method: get
           cors: true
           authorizer: aws_iam
@@ -76,7 +76,18 @@ functions:
       handler: update.main
       events:
       - http:
-          path: notes/{id}
+          path: drafts/{id}
           method: put
+          cors: true
+          authorizer: aws_iam
+  delete:
+    # Defines an HTTP API endpoint that calls the main function in delete.js
+    # - path: url path is /notes/{id}
+    # - method: DELETE request
+      handler: delete.main
+      events:
+      - http:
+          path: drafts/{id}
+          method: delete
           cors: true
           authorizer: aws_iam
