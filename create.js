@@ -6,7 +6,7 @@ import { success, failure } from "./libs/response-lib";
 // const credentials = new AWS.SharedIniFileCredentials({ profile: 'JotBox' }); AWS.config.credentials = credentials;
 
 
-export async function main(event, context, callback) {
+export async function main(event, context) {
     // Request body is passed in as a JSON encoded string in 'event.body'
     const data = JSON.parse(event.body);
     const params = {
