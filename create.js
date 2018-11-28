@@ -22,6 +22,7 @@ export async function main(event, context) {
         Item: {
             userId: event.requestContext.identity.cognitoIdentityId,
             draftId: uuid.v1(),
+            prompt: data.prompt,
             title: data.title,
             draft: data.draft,
             notes: data.notes,
