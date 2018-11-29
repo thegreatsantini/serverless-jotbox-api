@@ -14,11 +14,12 @@ export async function main(event, context) {
         },
         // 'UpdateExpression' defines the attributes to be updated
         // 'ExpressionAttributeValues' defines the value in the update expression
-        UpdateExpression: "SET draft = :draft, title = :title, notes = :notes",
+        UpdateExpression: "SET draft = :draft, title = :title, notes = :notes, prompt = :prompt",
         ExpressionAttributeValues: {
             ":title": data.title || null,
             ":draft": data.draft || null,
-            ":notes": data.notes || null
+            ":notes": data.notes || null,
+            ":prompt": data.prompt || null
         },
         // 'ReturnValues' specifies if and how to return the item's attributes,
         // where ALL_NEW returns all attributes of the item after the update; you
