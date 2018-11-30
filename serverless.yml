@@ -91,3 +91,11 @@ functions:
           method: delete
           cors: true
           authorizer: aws_iam
+  addUser:
+      handler: addUser.main
+      events:
+      - http:
+          path: users
+          method: post
+          cors: true
+          authorizer: aws_iam
