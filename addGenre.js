@@ -9,7 +9,7 @@ export async function main(event, context) {
     // Request body is passed in as a JSON encoded string in 'event.body'
     const data = JSON.parse(event.body);
     const params = {
-        TableName: "users",
+        TableName: "genres",
         // 'Item' contains the attributes of the item to be created
         // - 'userId': user identities are federated through the
         //             Cognito Identity Pool, we will use the identity id
@@ -20,8 +20,7 @@ export async function main(event, context) {
         // - 'createdAt': current Unix timestamp
         Item: {
             userId: event.requestContext.identity.cognitoIdentityId,
-            userName: data.userName,
-            followers: data.followers
+            genre: data.genre
         }
     };
 

@@ -59,9 +59,6 @@ functions:
           cors: true
           authorizer: aws_iam
   list:
-    # Defines an HTTP API endpoint that calls the main function in list.js
-    # - path: url path is /notes
-    # - method: GET request
       handler: list.main
       events:
       - http:
@@ -70,9 +67,6 @@ functions:
           cors: true
           authorizer: aws_iam
   update:
-    # Defines an HTTP API endpoint that calls the main function in update.js
-    # - path: url path is /notes/{id}
-    # - method: PUT request
       handler: update.main
       events:
       - http:
@@ -81,9 +75,6 @@ functions:
           cors: true
           authorizer: aws_iam
   delete:
-    # Defines an HTTP API endpoint that calls the main function in delete.js
-    # - path: url path is /notes/{id}
-    # - method: DELETE request
       handler: delete.main
       events:
       - http:
@@ -97,5 +88,29 @@ functions:
       - http:
           path: users
           method: post
+          cors: true
+          authorizer: aws_iam
+  listUsers:
+      handler: listUsers.main
+      events:
+      - http:
+          path: users
+          method: get
+          cors: true
+          authorizer: aws_iam
+  addGenre:
+      handler: addGenre.main
+      events:
+      - http:
+          path: genres
+          method: post
+          cors: true
+          authorizer: aws_iam
+  listGenres:
+      handler: listGenres.main
+      events:
+      - http:
+          path: genres
+          method: get
           cors: true
           authorizer: aws_iam
