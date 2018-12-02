@@ -106,11 +106,19 @@ functions:
           method: post
           cors: true
           authorizer: aws_iam
+  getGenres:
+      handler: getGenres.main
+      events:
+      - http:
+          path: genres
+          method: get
+          cors: true
+          authorizer: aws_iam
   listGenres:
       handler: listGenres.main
       events:
       - http:
-          path: genres
+          path: genres/list
           method: get
           cors: true
           authorizer: aws_iam
