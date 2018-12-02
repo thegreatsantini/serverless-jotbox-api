@@ -20,7 +20,7 @@ export async function main(event, context) {
         // - 'createdAt': current Unix timestamp
         Item: {
             userId: event.requestContext.identity.cognitoIdentityId,
-            genre: data.genre
+            genres: data.genres
         }
     };
 
