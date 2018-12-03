@@ -2,7 +2,7 @@
     "body": "{\"draft\":\"third draft\",\"title\":\"third draft\", \"notes\":\"third Notes\"}",
     "requestContext": {
         "identity": {
-            "cognitoIdentityId": "USER-SUB-1234"
+            "cognitoIdentityId": "us-east-1:1e63d94e-b101-4027-a88c-96bce27ba8af"
         }
     }
 }
