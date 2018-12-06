@@ -21,6 +21,7 @@ export async function main(event, context) {
         // - 'createdAt': current Unix timestamp
         Item: {
             userId: event.requestContext.identity.cognitoIdentityId,
+            userName: data.userName,
             draftId: uuid.v1(),
             prompt: data.prompt,
             title: data.title,
@@ -34,6 +35,6 @@ export async function main(event, context) {
         await dynamoDbLib.call("put", params);
         return success(params.Item);
     } catch (e) {
-        return failure({ status: false });
+        return failure({ status: false, error:'at least is het the route' });
     }
 }
