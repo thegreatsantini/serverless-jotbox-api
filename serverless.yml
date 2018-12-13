@@ -130,3 +130,11 @@ functions:
           method: get
           cors: true
           authorizer: aws_iam
+  viewDraft:
+      handler: viewDraft.main
+      events:
+      - http:
+          path: users/{id}/{draftId}
+          method: get
+          cors: true
+          authorizer: aws_iam
