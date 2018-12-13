@@ -21,7 +21,6 @@ export async function main(event, context) {
         // - 'createdAt': current Unix timestamp
         Item: {
             userId: event.requestContext.identity.cognitoIdentityId,
-            userName: data.userName,
             draftId: uuid.v1(),
             prompt: data.prompt,
             title: data.title,
